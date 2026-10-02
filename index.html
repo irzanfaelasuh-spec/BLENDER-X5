@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MyProject — Mini Blender</title>
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body>
+<header id="top"><b id="logo">◈ Mini Blender</b><nav id="menus"></nav><span id="ptitle"></span><button id="ptog" aria-label="Panels">☰</button></header>
+<aside id="tools"></aside>
+<main id="vp">
+  <div id="pv" title="Enter Camera Mode"><span>Camera</span><b>↗</b></div>
+  <div id="hint">G Move · R Rotate · S Scale · F Focus · Shift+D Clone</div>
+  <div id="camMode">
+    <div class="camTop"><span><i></i> CAMERA VIEW</span><small id="camName">Active Camera</small></div>
+    <button id="camExit" aria-label="Exit Camera Mode" title="Exit Camera Mode">×</button>
+    <div class="camCross"></div>
+    <div class="camBottom">
+      <span id="camReadout">50mm · 00.00s</span>
+      <div class="camControls">
+        <button id="camPlay" title="Play animation">▶</button>
+        <button id="camPause" title="Pause animation">❚❚</button>
+        <button id="camStop" title="Stop and go to frame 0">■</button>
+        <span id="camFrame">F 1</span>
+      </div>
+      <span>ESC / X to exit</span>
+    </div>
+  </div>
+</main>
+<aside id="side"><section id="outl"></section><section id="props"></section><section id="features">
+  <div class="featureHead"><b>Quick Tools</b><span>Blender-like controls</span></div>
+  <div class="featureGrid" id="featureGrid"></div>
+</section></aside>
+<footer id="tl">
+  <div class="bar"><button data-t="key">◆ Key</button><button data-t="play">▶</button><button data-t="pause">❚❚</button><button data-t="stop">■</button><span id="tt">0.00s</span><label>Length <input id="dur" type="number" min="1" max="60" value="5"></label></div>
+  <div class="trk"><div id="kfs"></div><input id="tr" type="range" min="0" max="5" step="0.01" value="0"></div>
+</footer>
+<div id="stat"><i id="dot"></i><span id="st">New Project</span><span id="info"></span></div>
+<div id="toasts"></div>
+<div id="modal"><div class="box"><p id="mm"></p><input id="mi"><div id="mb"></div></div></div>
+<div id="help">
+  <div class="helpBox">
+    <div class="helpHead"><div><strong>Mini Blender Help</strong><span>Everything you can do</span></div><button id="helpClose" aria-label="Close Help">×</button></div>
+    <div id="helpGrid"></div>
+  </div>
+</div>
+<input type="file" id="file" hidden>
+<script type="module" src="script.js"></script>
+</body>
+</html>
